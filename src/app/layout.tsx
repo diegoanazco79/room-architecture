@@ -43,13 +43,13 @@ export default function RootLayout ({
                 </a>
                 <div className='hidden w-full md:block md:w-auto'>
                   <ul className='flex items-center space-x-8 font-medium'>
-                    {menuItems?.map((item, idx) => (
-                      <li key={idx}>
+                    {menuItems?.map(({ label, url }) => (
+                      <li key={url}>
                         <Link
                           className='block p-2 text-black hover:bg-black hover:text-white hover:p-2 hover:transition-all hover:duration-300'
-                          href={item.url}
+                          href={url}
                         >
-                          {item.label}
+                          {label}
                         </Link>
                       </li>
                     ))}
