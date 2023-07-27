@@ -3,7 +3,9 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import { ConfigProvider } from 'antd';
 
-import Header from './layout/Header';
+import Footer from './main-layout/Footer';
+import Header from './main-layout/Header';
+
 import StyledComponentsRegistry from '@/lib/AntdRegistry';
 import theme from '@/theme/themeConfig';
 
@@ -28,6 +30,7 @@ export default function RootLayout ({
           <ConfigProvider theme={theme}>
             <Header />
             {children}
+            <Footer />
           </ConfigProvider>
         </StyledComponentsRegistry>
       </body>
