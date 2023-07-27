@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Drawer } from 'antd';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 import { menuItems } from '../helpers/menu-items';
@@ -12,28 +12,32 @@ import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 
 export default function Header () {
   const [showNavbar, setShowNavbar] = useState(false);
-  const [scrolling, setScrolling] = useState(false);
+  // const [scrolling, setScrolling] = useState(false);
 
-  const handleScroll = () => {
-    if (typeof window !== 'undefined') {
-      if (window.scrollY > 0) setScrolling(true);
-      else setScrolling(false);
-    }
-  };
+  /*
+   * const handleScroll = () => {
+   *   if (typeof window !== 'undefined') {
+   *     if (window.scrollY > 0) setScrolling(true);
+   *     else setScrolling(false);
+   *   }
+   * };
+   */
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }
-  }, []);
+  /*
+   * useEffect(() => {
+   *   if (typeof window !== 'undefined') {
+   *     window.addEventListener('scroll', handleScroll);
+   *     return () => {
+   *       window.removeEventListener('scroll', handleScroll);
+   *     };
+   *   }
+   * }, []);
+   */
 
   const pathname = usePathname();
 
   return (
-    <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${scrolling && 'shadow-sm'}`}>
+    <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${'shadow-sm'}`}>
       <div className='flex flex-wrap items-center justify-between max-w-screen-xl px-4 py-6 mx-auto'>
         <a href='/' className='flex items-center'>
           <Image
