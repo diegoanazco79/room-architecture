@@ -6,8 +6,6 @@ import { Drawer } from 'antd'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
-import { menuItems } from '../helpers/menu-items'
-
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 
 export default function Header () {
@@ -27,6 +25,25 @@ export default function Header () {
   }, [])
 
   const pathname = usePathname()
+
+  const menuItems = [
+    {
+      label: 'Inicio',
+      url: '/'
+    },
+    {
+      label: 'Proyectos',
+      url: '/projects'
+    },
+    {
+      label: 'Nosotros',
+      url: '/about'
+    },
+    {
+      label: 'Contacto',
+      url: '/contact'
+    }
+  ]
 
   return (
     <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${scrolling ? 'shadow-sm' : ''}`}>
