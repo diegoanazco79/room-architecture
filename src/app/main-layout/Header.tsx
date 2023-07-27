@@ -13,14 +13,18 @@ export default function Header () {
   const [scrolling, setScrolling] = useState(false)
 
   const handleScroll = () => {
-    if (window.scrollY > 0) setScrolling(true)
-    else setScrolling(false)
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > 0) setScrolling(true)
+      else setScrolling(false)
+    }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll)
+      return () => {
+        window.removeEventListener('scroll', handleScroll)
+      }
     }
   }, [])
 
@@ -45,6 +49,8 @@ export default function Header () {
     }
   ]
 
+  console.log({ pathname, menuItems })
+
   return (
     <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${scrolling ? 'shadow-sm' : ''}`}>
       <div className='flex flex-wrap items-center justify-between max-w-screen-xl px-4 py-6 mx-auto'>
@@ -58,19 +64,16 @@ export default function Header () {
         </a>
         <div className='hidden w-full md:block md:w-auto'>
           <ul className='flex items-center space-x-8 font-medium'>
-            {menuItems?.map((item, idx) => {
-              const isActive = pathname.startsWith(item.url)
-              return (
-                <li key={idx}>
-                  <Link
-                    className={`block ${isActive ? 'bg-black text-white' : ''} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
-                    href={item.url ?? '/'}
-                  >
-                    {item.label ?? 'Home'}
-                  </Link>
-                </li>
-              )
-            })}
+            {menuItems?.map((item, idx) => (
+              <li key={idx}>
+                <Link
+                  className={`block ${pathname === item.url ? 'bg-black text-white' : ''} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
+                  href={item.url ?? '/'}
+                >
+                  {item.label ?? 'Home'}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <button
@@ -90,19 +93,16 @@ export default function Header () {
           </button>
         </div>
         <ul>
-          {menuItems.map((item, idx) => {
-            const isActive = pathname.startsWith(item.url)
-            return (
-              <li className='rounded-lg' key={idx} onClick={() => setShowNavbar(false)}>
-                <Link
-                  className={`block ${isActive ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
-                  href={item.url}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            )
-          })}
+          {menuItems?.map((item, idx) => (
+            <li className='rounded-lg' key={idx} onClick={() => setShowNavbar(false)}>
+              <Link
+                className={`block ${pathname === item.url ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
+                href={item.url}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </Drawer>
     </nav>
