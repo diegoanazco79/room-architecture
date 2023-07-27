@@ -4,7 +4,6 @@ import { Montserrat } from 'next/font/google'
 import { ConfigProvider } from 'antd'
 
 import Footer from './main-layout/Footer'
-// import Header from './main-layout/Header'
 
 import StyledComponentsRegistry from '@/lib/AntdRegistry'
 import theme from '@/theme/themeConfig'
@@ -12,7 +11,26 @@ import theme from '@/theme/themeConfig'
 import './globals.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import { menuItems } from './helpers/menu-items'
+// import Header from './main-layout/Header'
+
+const menuItems = [
+  {
+    label: 'Inicio',
+    url: '/'
+  },
+  {
+    label: 'Proyectos',
+    url: '/projects'
+  },
+  {
+    label: 'Nosotros',
+    url: '/about'
+  },
+  {
+    label: 'Contacto',
+    url: '/contact'
+  }
+]
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
