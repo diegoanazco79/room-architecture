@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Drawer } from 'antd'
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 
@@ -22,6 +23,8 @@ export default function Header () {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
+  const pathname = usePathname()
 
   const menuItems = [
     {
@@ -55,16 +58,19 @@ export default function Header () {
         </a>
         <div className='hidden w-full md:block md:w-auto'>
           <ul className='flex items-center space-x-8 font-medium'>
-            {menuItems?.map((item, idx) => (
-              <li key={idx}>
-                <Link
-                  className={`block ${item.url === '/' ? 'bg-black text-white' : ''} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
-                  href={item.url ?? '/'}
-                >
-                  {item.label ?? 'Home'}
-                </Link>
-              </li>
-            ))}
+            {menuItems?.map((item, idx) => {
+              const isActive = pathname.startsWith(item.url)
+              return (
+                <li key={idx}>
+                  <Link
+                    className={`block ${isActive ? 'bg-black text-white' : ''} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
+                    href={item.url ?? '/'}
+                  >
+                    {item.label ?? 'Home'}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </div>
         <button
@@ -84,16 +90,19 @@ export default function Header () {
           </button>
         </div>
         <ul>
-          {menuItems.map((item, idx) => (
-            <li className='rounded-lg' key={idx} onClick={() => setShowNavbar(false)}>
-              <Link
-                className={`block ${item.url === '/' ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
-                href={item.url}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
+          {menuItems.map((item, idx) => {
+            const isActive = pathname.startsWith(item.url)
+            return (
+              <li className='rounded-lg' key={idx} onClick={() => setShowNavbar(false)}>
+                <Link
+                  className={`block ${isActive ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
+                  href={item.url}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       </Drawer>
     </nav>
