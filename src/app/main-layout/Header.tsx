@@ -7,8 +7,15 @@ import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
+import { menuItems } from '../helpers/menu-items'
 
 export default function Header () {
+  const pathname = usePathname()
+
+  useEffect(() => {
+    console.log('pathname:', pathname)
+  }, [pathname])
+
   const [showNavbar, setShowNavbar] = useState(false)
   const [scrolling, setScrolling] = useState(false)
 
@@ -28,29 +35,6 @@ export default function Header () {
     }
   }, [])
 
-  const pathname = usePathname()
-
-  const menuItems = [
-    {
-      label: 'Inicio',
-      url: '/'
-    },
-    {
-      label: 'Proyectos',
-      url: '/projects'
-    },
-    {
-      label: 'Nosotros',
-      url: '/about'
-    },
-    {
-      label: 'Contacto',
-      url: '/contact'
-    }
-  ]
-
-  console.log({ pathname, menuItems })
-
   return (
     <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${scrolling ? 'shadow-sm' : ''}`}>
       <div className='flex flex-wrap items-center justify-between max-w-screen-xl px-4 py-6 mx-auto'>
@@ -68,9 +52,9 @@ export default function Header () {
               <li key={idx}>
                 <Link
                   className={`block ${pathname === item.url ? 'bg-black text-white' : ''} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
-                  href={item.url ?? '/'}
+                  href={item.url}
                 >
-                  {item.label ?? 'Home'}
+                  {item.label}
                 </Link>
               </li>
             ))}
