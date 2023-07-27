@@ -2,13 +2,13 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-// import { Drawer } from 'antd'
+import { Drawer } from 'antd'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 import { menuItems } from '../helpers/menu-items'
 
-import { MenuOutlined } from '@ant-design/icons'
+import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 
 export default function Header () {
   const [showNavbar, setShowNavbar] = useState(false)
@@ -44,10 +44,10 @@ export default function Header () {
             {menuItems.map((item, idx) => (
               <li key={idx}>
                 <Link
-                  className={`block ${pathname === item.url && 'bg-black text-white'} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
-                  href={item.url}
+                  // className={`block ${pathname === item.url && 'bg-black text-white'} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
+                  href={item.url ?? '/'}
                 >
-                  {item.label}
+                  {item.label ?? 'Home'}
                 </Link>
               </li>
             ))}
@@ -60,7 +60,7 @@ export default function Header () {
           <MenuOutlined style={{ fontSize: 20 }} />
         </button>
       </div>
-      {/* <Drawer closable={false} placement='right' onClose={() => setShowNavbar(false)} open={showNavbar}>
+      <Drawer closable={false} placement='right' onClose={() => setShowNavbar(false)} open={showNavbar}>
         <div className='flex justify-end'>
           <button
             className='p-2 rounded-lg text-gray-950 md:hidden hover:bg-gray-100'
@@ -81,7 +81,7 @@ export default function Header () {
             </li>
           ))}
         </ul>
-      </Drawer> */}
+      </Drawer>
     </nav>
   )
 }
