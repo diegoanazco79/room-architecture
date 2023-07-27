@@ -1,4 +1,9 @@
-export const menuItems = [
+interface MenuItem {
+  label: string;
+  url: string;
+}
+
+export const menuItems: MenuItem[] = [
   {
     label: 'Inicio',
     url: '/'

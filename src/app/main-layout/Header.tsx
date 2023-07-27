@@ -3,7 +3,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Drawer } from 'antd'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 import { menuItems } from '../helpers/menu-items'
 
@@ -11,32 +12,28 @@ import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 
 export default function Header () {
   const [showNavbar, setShowNavbar] = useState(false)
-  // const [scrolling, setScrolling] = useState(false)
+  const [scrolling, setScrolling] = useState(false)
 
-  /*
-   * const handleScroll = () => {
-   *   if (typeof window !== 'undefined') {
-   *     if (window.scrollY > 0) setScrolling(true)
-   *     else setScrolling(false)
-   *   }
-   * }
-   */
+  const handleScroll = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > 0) setScrolling(true)
+      else setScrolling(false)
+    }
+  }
 
-  /*
-   * useEffect(() => {
-   *   if (typeof window !== 'undefined') {
-   *     window.addEventListener('scroll', handleScroll)
-   *     return () => {
-   *       window.removeEventListener('scroll', handleScroll)
-   *     }
-   *   }
-   * }, [])
-   */
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll)
+      return () => {
+        window.removeEventListener('scroll', handleScroll)
+      }
+    }
+  }, [])
 
-  // const pathname = usePathname()
+  const pathname = usePathname()
 
   return (
-    <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${'shadow-sm'}`}>
+    <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${scrolling && 'shadow-sm'}`}>
       <div className='flex flex-wrap items-center justify-between max-w-screen-xl px-4 py-6 mx-auto'>
         <a href='/' className='flex items-center'>
           <Image
@@ -51,7 +48,7 @@ export default function Header () {
             {menuItems?.map((item, idx) => (
               <li key={idx}>
                 <Link
-                  className={`block ${item.url === '/' && 'bg-black text-white'} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
+                  className={`block ${pathname === item.url && 'bg-black text-white'} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
                   href={item.url}
                 >
                   {item.label}
@@ -80,7 +77,7 @@ export default function Header () {
           {menuItems?.map((item, idx) => (
             <li className='rounded-lg' key={idx} onClick={() => setShowNavbar(false)}>
               <Link
-                className={`block ${item.url === '/' ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
+                className={`block ${pathname === item.url ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
                 href={item.url}
               >
                 {item.label}
