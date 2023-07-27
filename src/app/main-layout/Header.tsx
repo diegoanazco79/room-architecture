@@ -6,8 +6,6 @@ import { Drawer } from 'antd'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
-import { menuItems } from '../helpers/menu-items'
-
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 
 export default function Header () {
@@ -57,6 +55,12 @@ export default function Header () {
             >
               Projects
             </Link>
+            <Link
+              className={`block ${pathname === '/about' && 'bg-black text-white'} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
+              href='/about'
+            >
+              Nosotros
+            </Link>
           </ul>
         </div>
         <button
@@ -76,16 +80,24 @@ export default function Header () {
           </button>
         </div>
         <ul>
-          {menuItems?.map((item, idx) => (
-            <li className='rounded-lg' key={idx} onClick={() => setShowNavbar(false)}>
-              <Link
-                className={`block ${pathname === item.url ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
-                href={item.url}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
+          <Link
+            className={`block ${pathname === '/' ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
+            href='/'
+          >
+            Inicio
+          </Link>
+          <Link
+            className={`block ${pathname === '/projects' ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
+            href='/projects'
+          >
+            Proyectos
+          </Link>
+          <Link
+            className={`block ${pathname === '/about' ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
+            href='/about'
+          >
+            Nosotros
+          </Link>
         </ul>
       </Drawer>
     </nav>
