@@ -45,16 +45,18 @@ export default function Header () {
         </a>
         <div className='hidden w-full md:block md:w-auto'>
           <ul className='flex items-center space-x-8 font-medium'>
-            {menuItems?.map((item, idx) => (
-              <li key={idx}>
-                <Link
-                  className={`block ${pathname === item.url && 'bg-black text-white'} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
-                  href={item.url}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            <Link
+              className={`block ${pathname === '/' && 'bg-black text-white'} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
+              href='/'
+            >
+              Inicio
+            </Link>
+            <Link
+              className={`block ${pathname === '/projects' && 'bg-black text-white'} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
+              href='/projects'
+            >
+              Projects
+            </Link>
           </ul>
         </div>
         <button
