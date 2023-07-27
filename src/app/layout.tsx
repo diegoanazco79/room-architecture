@@ -1,8 +1,11 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
+import { ConfigProvider } from 'antd';
 
-import Header from './components/Header';
+import Header from './layout/Header';
+import StyledComponentsRegistry from '@/lib/AntdRegistry';
+import theme from '@/theme/themeConfig';
 
 import './globals.css';
 
@@ -21,8 +24,12 @@ export default function RootLayout ({
   return (
     <html lang='en'>
       <body className={montserrat.className}>
-        <Header />
-        {children}
+        <StyledComponentsRegistry>
+          <ConfigProvider theme={theme}>
+            <Header />
+            {children}
+          </ConfigProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
