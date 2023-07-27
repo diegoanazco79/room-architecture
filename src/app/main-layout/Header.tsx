@@ -41,7 +41,7 @@ export default function Header () {
         </a>
         <div className='hidden w-full md:block md:w-auto'>
           <ul className='flex items-center space-x-8 font-medium'>
-            {menuItems.map((item, idx) => (
+            {menuItems?.map((item, idx) => (
               <li key={idx}>
                 <Link
                   className={`block ${pathname === item.url && 'bg-black text-white'} hover:bg-black hover:text-white hover:p-2 p-2 hover:transition-all hover:duration-300 text-black`}
@@ -70,7 +70,7 @@ export default function Header () {
           </button>
         </div>
         <ul>
-          {menuItems.map((item, idx) => (
+          {menuItems?.map((item, idx) => (
             <li className='rounded-lg' key={idx} onClick={() => setShowNavbar(false)}>
               <Link
                 className={`block ${pathname === item.url ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
