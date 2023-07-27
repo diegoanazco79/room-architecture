@@ -12,10 +12,6 @@ import { menuItems } from '../helpers/menu-items'
 export default function Header () {
   const pathname = usePathname()
 
-  useEffect(() => {
-    console.log('pathname:', pathname)
-  }, [pathname])
-
   const [showNavbar, setShowNavbar] = useState(false)
   const [scrolling, setScrolling] = useState(false)
 
