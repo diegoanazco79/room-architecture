@@ -4,8 +4,7 @@ import { Montserrat } from 'next/font/google';
 import { ConfigProvider } from 'antd';
 
 import Footer from './main-layout/Footer';
-
-// import Header from './main-layout/Header';
+import Header from './main-layout/Header';
 
 import StyledComponentsRegistry from '@/lib/AntdRegistry';
 import theme from '@/theme/themeConfig';
@@ -29,7 +28,7 @@ export default function RootLayout ({
       <body className={montserrat.className}>
         <StyledComponentsRegistry>
           <ConfigProvider theme={theme}>
-            {/* <Header /> */}
+            <Header />
             {children}
             <Footer />
           </ConfigProvider>

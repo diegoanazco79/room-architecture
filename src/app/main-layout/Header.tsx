@@ -15,15 +15,19 @@ export default function Header () {
   const [scrolling, setScrolling] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 0) setScrolling(true);
-    else setScrolling(false);
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > 0) setScrolling(true);
+      else setScrolling(false);
+    }
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
   }, []);
 
   const pathname = usePathname();
