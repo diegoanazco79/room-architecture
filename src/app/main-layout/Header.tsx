@@ -64,9 +64,7 @@ export default function Header () {
         </button>
       </div>
       <Drawer
-        classes={{
-          paper: 'w-80 p-5'
-        }}
+        classes={{ paper: 'w-80 p-5' }}
         anchor='right'
         open={showNavbar}
         onClose={() => setShowNavbar(false)}
