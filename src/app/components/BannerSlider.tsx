@@ -47,22 +47,22 @@ const BannerSlider = () => {
     <div ref={sliderRef} className='keen-slider'>
       <div className='keen-slider__slide h-[220px] lg:h-[450px] xl:h-[600px]'>
         <Image
-          src='/img/slider/slider-1.jpg'
-          alt='Picture of the author'
+          src='/img/home/slider/slider-1.jpg'
+          alt='slider-1'
           layout='fill'
         />
       </div>
       <div className='keen-slider__slide h-[220px] lg:h-[450px] xl:h-[600px]'>
         <Image
-          src='/img/slider/slider-2.jpg'
-          alt='Picture of the author'
+          src='/img/home/slider/slider-2.jpg'
+          alt='slider-2'
           layout='fill'
         />
       </div>
       <div className='keen-slider__slide h-[220px] lg:h-[450px] xl:h-[600px]'>
         <Image
-          src='/img/slider/slider-3.jpg'
-          alt='Picture of the author'
+          src='/img/home/slider/slider-3.jpg'
+          alt='slider-3'
           layout='fill'
         />
       </div>
