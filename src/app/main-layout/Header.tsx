@@ -64,13 +64,13 @@ export default function Header () {
           Menu
         </button>
       </div>
-      {/* <Drawer closable={false} placement='right' onClose={() => setShowNavbar(false)} open={showNavbar}>
+      <Drawer closable={false} placement='right' onClose={() => setShowNavbar(false)} open={showNavbar}>
         <div className='flex justify-end'>
           <button
             className='p-2 mb-3 text-black rounded-lg md:hidden'
             onClick={() => setShowNavbar(!showNavbar)}
           >
-            <CloseOutlined style={{ fontSize: 25 }} />
+Close
           </button>
         </div>
         <ul>
@@ -85,7 +85,7 @@ export default function Header () {
             </li>
           ))}
         </ul>
-      </Drawer> */}
+      </Drawer>
     </nav>
   )
 }
