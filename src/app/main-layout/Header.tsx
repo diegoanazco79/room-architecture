@@ -65,7 +65,7 @@ export default function Header () {
       </div>
       <Drawer
         classes={{
-          paper: 'w-80'
+          paper: 'w-80 p-5'
         }}
         anchor='right'
         open={showNavbar}
