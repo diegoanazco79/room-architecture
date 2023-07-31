@@ -61,10 +61,10 @@ export default function Header () {
           className='p-2 text-black rounded-lg md:hidden'
           onClick={() => setShowNavbar(!showNavbar)}
         >
-          Menu
+          <MenuOutlined style={{ fontSize: 20 }} />
         </button>
       </div>
-      <Drawer closable={false} placement='right' onClose={() => setShowNavbar(false)} open={showNavbar}>
+      {/* <Drawer closable={false} placement='right' onClose={() => setShowNavbar(false)} open={showNavbar}>
         <div className='flex justify-end'>
           <button
             className='p-2 mb-3 text-black rounded-lg md:hidden'
@@ -85,7 +85,7 @@ Close
             </li>
           ))}
         </ul>
-      </Drawer>
+      </Drawer> */}
     </nav>
   )
 }
