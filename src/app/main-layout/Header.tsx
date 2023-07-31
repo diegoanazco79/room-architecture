@@ -1,13 +1,11 @@
-/* eslint-disable */
 'use client'
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Drawer } from 'antd'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
-import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
+import { MenuOutlined } from '@ant-design/icons'
 import { menuItems } from '../helpers/menu-items'
 
 export default function Header () {
@@ -64,28 +62,6 @@ export default function Header () {
           <MenuOutlined style={{ fontSize: 20 }} />
         </button>
       </div>
-      {/* <Drawer closable={false} placement='right' onClose={() => setShowNavbar(false)} open={showNavbar}>
-        <div className='flex justify-end'>
-          <button
-            className='p-2 mb-3 text-black rounded-lg md:hidden'
-            onClick={() => setShowNavbar(!showNavbar)}
-          >
-Close
-          </button>
-        </div>
-        <ul>
-          {menuItems?.map((item, idx) => (
-            <li className='rounded-lg' key={idx} onClick={() => setShowNavbar(false)}>
-              <Link
-                className={`block ${pathname === item.url ? 'bg-black text-white' : 'text-black'} py-4 font-medium pl-2`}
-                href={item.url}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </Drawer> */}
     </nav>
   )
 }
