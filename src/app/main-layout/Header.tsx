@@ -2,11 +2,12 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
-import { MenuOutlined } from '@ant-design/icons'
+import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 import { menuItems } from '../helpers/menu-items'
+import { Drawer } from '@mui/material'
 
 export default function Header () {
   const pathname = usePathname()
@@ -62,6 +63,35 @@ export default function Header () {
           <MenuOutlined style={{ fontSize: 20 }} />
         </button>
       </div>
+      <Drawer
+        classes={{
+          paper: 'w-80'
+        }}
+        anchor='right'
+        open={showNavbar}
+        onClose={() => setShowNavbar(false)}
+      >
+        <div className='flex justify-end w-full'>
+          <button
+            className='p-2 rounded-lg text-gray-950 md:hidden hover:bg-gray-100'
+            onClick={() => setShowNavbar(!showNavbar)}
+          >
+            <CloseOutlined style={{ fontSize: 25 }} />
+          </button>
+        </div>
+        <ul>
+          {menuItems.map((item, idx) => (
+            <li className='rounded-lg' key={idx} onClick={() => setShowNavbar(false)}>
+              <Link
+                className={`block ${item.url === pathname ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
+                href={item.url}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Drawer>
     </nav>
   )
 }
