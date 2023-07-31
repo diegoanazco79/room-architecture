@@ -13,8 +13,8 @@ export default function Footer () {
           <div className='flex flex-col items-center md:items-start md:justify-start'>
             <Image
               src='/img/logo-white.png'
-              width={140}
-              height={140}
+              width={100}
+              height={100}
               alt='ROOM Arquitectos'
             />
             <p className='w-4/5 mt-4 text-xs'>

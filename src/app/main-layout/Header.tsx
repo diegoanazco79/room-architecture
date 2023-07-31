@@ -57,7 +57,7 @@ export default function Header () {
           </ul>
         </div>
         <button
-          className='p-2 rounded-lg text-gray-950 md:hidden hover:bg-gray-100'
+          className='p-2 text-black rounded-lg md:hidden'
           onClick={() => setShowNavbar(!showNavbar)}
         >
           <MenuOutlined style={{ fontSize: 20 }} />
@@ -66,7 +66,7 @@ export default function Header () {
       <Drawer closable={false} placement='right' onClose={() => setShowNavbar(false)} open={showNavbar}>
         <div className='flex justify-end'>
           <button
-            className='p-2 rounded-lg text-gray-950 md:hidden hover:bg-gray-100'
+            className='p-2 mb-3 text-black rounded-lg md:hidden'
             onClick={() => setShowNavbar(!showNavbar)}
           >
             <CloseOutlined style={{ fontSize: 25 }} />
@@ -76,7 +76,7 @@ export default function Header () {
           {menuItems?.map((item, idx) => (
             <li className='rounded-lg' key={idx} onClick={() => setShowNavbar(false)}>
               <Link
-                className={`block ${pathname === item.url ? 'bg-black text-white' : 'text-gray-950'} py-4 font-medium pl-2`}
+                className={`block ${pathname === item.url ? 'bg-black text-white' : 'text-black'} py-4 font-medium pl-2`}
                 href={item.url}
               >
                 {item.label}
