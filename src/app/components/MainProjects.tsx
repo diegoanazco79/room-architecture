@@ -5,8 +5,8 @@ const MainProjects = () => {
   return (
     <div className='w-full py-14'>
       <h1 className='mb-4 text-2xl text-left lg:mb-8'> Proyectos Destacados</h1>
-      <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 px-2 py-5 lg:p-10 min-h-[440px]'>
-        <div className='lg:text-[65px] text-[40px]'>CASA DE LEÓN</div>
+      <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 px-2 py-5 lg:p-10 xl:min-h-[440px] lg:min-h-[350px]'>
+        <div className='xl:text-[65px] lg:text-[50px] text-[40px]'>CASA DE LEÓN</div>
         <div className='text-sm'>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -23,8 +23,8 @@ const MainProjects = () => {
           />
         </div>
       </div>
-      <div className='grid lg:grid-cols-3 grid-cols-1 gap-6 px-2 py-5 lg:p-10 min-h-[440px]'>
-        <div className='lg:text-[65px] text-[40px] lg:hidden block'>CASA MONTES DE OCA</div>
+      <div className='grid lg:grid-cols-3 grid-cols-1 gap-6 px-2 py-5 lg:p-10 xl:min-h-[440px] lg:min-h-[350px]'>
+        <div className='xl:text-[65px] lg:text-[50px] text-[40px] lg:hidden block'>CASA MONTES DE OCA</div>
         <div className='text-sm'>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -40,10 +40,10 @@ const MainProjects = () => {
             fill
           />
         </div>
-        <div className='lg:text-[65px] text-[40px] lg:block hidden'>CASA MONTES DE OCA</div>
+        <div className='xl:text-[65px] lg:text-[50px] text-[40px] lg:block hidden'>CASA MONTES DE OCA</div>
       </div>
-      <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 px-2 py-5 lg:p-10 min-h-[440px]'>
-        <div className='lg:text-[65px] text-[40px]'>CASA ARIAS</div>
+      <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 px-2 py-5 lg:p-10 xl:min-h-[440px] lg:min-h-[350px]'>
+        <div className='xl:text-[65px] lg:text-[50px] text-[40px]'>CASA ARIAS</div>
         <div className='text-sm'>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
