@@ -13,36 +13,36 @@ import { menuItems } from '../helpers/menu-items'
 export default function Header () {
   const pathname = usePathname()
 
-  const [showNavbar, setShowNavbar] = useState(false)
-  const [scrolling, setScrolling] = useState(false)
+  // const [showNavbar, setShowNavbar] = useState(false)
+  // const [scrolling, setScrolling] = useState(false)
 
-  const handleScroll = () => {
-    if (typeof window !== 'undefined') {
-      if (window.scrollY > 0) setScrolling(true)
-      else setScrolling(false)
-    }
-  }
+  // const handleScroll = () => {
+  //   if (typeof window !== 'undefined') {
+  //     if (window.scrollY > 0) setScrolling(true)
+  //     else setScrolling(false)
+  //   }
+  // }
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll)
-      return () => {
-        window.removeEventListener('scroll', handleScroll)
-      }
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     window.addEventListener('scroll', handleScroll)
+  //     return () => {
+  //       window.removeEventListener('scroll', handleScroll)
+  //     }
+  //   }
+  // }, [])
 
   return (
-    <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${scrolling ? 'shadow-sm' : ''}`}>
+    <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${true ? 'shadow-sm' : ''}`}>
       <div className='flex flex-wrap items-center justify-between max-w-screen-xl px-4 py-6 mx-auto'>
-        {/* <a href='/' className='flex items-center'>
+        <a href='/' className='flex items-center'>
           <Image
             src='/img/logo.png'
             width={140}
             height={140}
             alt='ROOM Arquitectos'
           />
-        </a> */}
+        </a>
         <div className='hidden w-full md:block md:w-auto'>
           <ul className='flex items-center space-x-8 font-medium'>
             {menuItems?.map((item, idx) => (
@@ -57,14 +57,14 @@ export default function Header () {
             ))}
           </ul>
         </div>
-        <button
+        {/* <button
           className='p-2 text-black rounded-lg md:hidden'
           onClick={() => setShowNavbar(!showNavbar)}
         >
           <MenuOutlined style={{ fontSize: 20 }} />
-        </button>
+        </button> */}
       </div>
-      <Drawer closable={false} placement='right' onClose={() => setShowNavbar(false)} open={showNavbar}>
+      {/* <Drawer closable={false} placement='right' onClose={() => setShowNavbar(false)} open={showNavbar}>
         <div className='flex justify-end'>
           <button
             className='p-2 mb-3 text-black rounded-lg md:hidden'
@@ -85,7 +85,7 @@ export default function Header () {
             </li>
           ))}
         </ul>
-      </Drawer>
+      </Drawer> */}
     </nav>
   )
 }
