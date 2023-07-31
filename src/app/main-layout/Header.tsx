@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use client'
 
 import Image from 'next/image'
@@ -10,30 +11,41 @@ import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 import { menuItems } from '../helpers/menu-items'
 
 export default function Header () {
-  const pathname = usePathname()
+  // const pathname = usePathname()
 
-  const [showNavbar, setShowNavbar] = useState(false)
-  const [scrolling, setScrolling] = useState(false)
+  // const [showNavbar, setShowNavbar] = useState(false)
+  // const [scrolling, setScrolling] = useState(false)
 
-  const handleScroll = () => {
-    if (typeof window !== 'undefined') {
-      if (window.scrollY > 0) setScrolling(true)
-      else setScrolling(false)
-    }
-  }
+  // const handleScroll = () => {
+  //   if (typeof window !== 'undefined') {
+  //     if (window.scrollY > 0) setScrolling(true)
+  //     else setScrolling(false)
+  //   }
+  // }
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll)
-      return () => {
-        window.removeEventListener('scroll', handleScroll)
-      }
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     window.addEventListener('scroll', handleScroll)
+  //     return () => {
+  //       window.removeEventListener('scroll', handleScroll)
+  //     }
+  //   }
+  // }, [])
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${scrolling ? 'shadow-sm' : ''}`}>
+    <ul>
+      {menuItems?.map((item, idx) => (
+      <li key={item.url}>
+        <Link
+          href={item.url}
+        >
+          {item.label}
+        </Link>
+      </li>
+      ))}
+    </ul>
+      {/* <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${scrolling ? 'shadow-sm' : ''}`}>
         <div className='flex flex-wrap items-center justify-between max-w-screen-xl px-4 py-6 mx-auto'>
           <a href='/' className='flex items-center'>
             <Image
@@ -86,7 +98,7 @@ export default function Header () {
             ))}
           </ul>
         </Drawer>
-      </nav>
+      </nav> */}
     </>
   )
 }
