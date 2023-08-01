@@ -1,15 +1,23 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
+
+import ArrowSlider from './ArrowSlider'
+
 import { useKeenSlider } from 'keen-slider/react'
 
 import 'keen-slider/keen-slider.min.css'
 
 const BannerSlider = () => {
-  const [sliderRef] = useKeenSlider<HTMLDivElement>(
+  const [loaded, setLoaded] = useState(false)
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
-      loop: true
+      loop: true,
+      initial: 0,
+      created () {
+        setLoaded(true)
+      }
     },
     [
       (slider) => {
@@ -46,26 +54,27 @@ const BannerSlider = () => {
   return (
     <div ref={sliderRef} className='keen-slider'>
       <div className='keen-slider__slide h-[220px] lg:h-[450px] xl:h-[600px]'>
-        <Image
-          src='/img/home/slider/slider-1.jpg'
-          alt='slider-1'
-          layout='fill'
-        />
+        <Image src='/img/home/slider/slider-1.jpg' alt='slider-1' fill />
       </div>
       <div className='keen-slider__slide h-[220px] lg:h-[450px] xl:h-[600px]'>
-        <Image
-          src='/img/home/slider/slider-2.jpg'
-          alt='slider-2'
-          layout='fill'
-        />
+        <Image src='/img/home/slider/slider-2.jpg' alt='slider-2' fill />
       </div>
       <div className='keen-slider__slide h-[220px] lg:h-[450px] xl:h-[600px]'>
-        <Image
-          src='/img/home/slider/slider-3.jpg'
-          alt='slider-3'
-          layout='fill'
-        />
+        <Image src='/img/home/slider/slider-3.jpg' alt='slider-3' fill />
       </div>
+      {loaded && instanceRef.current && (
+        <>
+          <ArrowSlider
+            left
+            onClick={(e: any) =>
+              e.stopPropagation() || instanceRef.current?.prev()}
+          />
+          <ArrowSlider
+            onClick={(e: any) =>
+              e.stopPropagation() || instanceRef.current?.next()}
+          />
+        </>
+      )}
     </div>
   )
 }
