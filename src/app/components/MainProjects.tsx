@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const MainProjects = () => {
   return (
@@ -60,6 +61,7 @@ const MainProjects = () => {
           />
         </div>
       </div>
+      <Link href='/projects' className='underline'>Ver todos los proyectos</Link>
     </div>
   )
 }
