@@ -2,6 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { casaArias, casaLeon, casaMontesOca } from '../helpers/projects-ids'
+
 const MainProjects = () => {
   return (
     <div className='w-full py-14'>
@@ -15,14 +17,14 @@ const MainProjects = () => {
           specimen book. It has survived not only five centuries, but also the leap into
           electronic typesetting, remaining essentially unchanged.
         </div>
-        <div className='relative min-h-[300px]'>
+        <Link href={`/projects/${casaLeon}`} className='relative min-h-[300px]'>
           <Image
             className='cursor-pointer hover:opacity-50'
             src='/img/home/projects/leon-home.jpg'
             alt='leon-home'
             fill
           />
-        </div>
+        </Link>
       </div>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-6 px-2 py-5 lg:p-10 xl:min-h-[440px] lg:min-h-[350px]'>
         <div className='xl:text-[65px] lg:text-[50px] text-[40px] lg:hidden block'>CASA MONTES DE OCA</div>
@@ -33,14 +35,14 @@ const MainProjects = () => {
           specimen book. It has survived not only five centuries, but also the leap into
           electronic typesetting, remaining essentially unchanged.
         </div>
-        <div className='relative min-h-[300px]'>
+        <Link href={`/projects/${casaMontesOca}`} className='relative min-h-[300px]'>
           <Image
             className='cursor-pointer hover:opacity-50'
             src='/img/home/projects/montes-home.jpg'
             alt='montes-home'
             fill
           />
-        </div>
+        </Link>
         <div className='xl:text-[65px] lg:text-[50px] text-[40px] lg:block hidden'>CASA MONTES DE OCA</div>
       </div>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 px-2 py-5 lg:p-10 xl:min-h-[440px] lg:min-h-[350px]'>
@@ -52,14 +54,14 @@ const MainProjects = () => {
           specimen book. It has survived not only five centuries, but also the leap into
           electronic typesetting, remaining essentially unchanged.
         </div>
-        <div className='relative min-h-[300px]'>
+        <Link href={`/projects/${casaArias}`} className='relative min-h-[300px]'>
           <Image
             className='cursor-pointer hover:opacity-50'
             src='/img/home/projects/arias-home.jpg'
             alt='arias-home'
             fill
           />
-        </div>
+        </Link>
       </div>
       <Link href='/projects' className='underline'>Ver todos los proyectos</Link>
     </div>
