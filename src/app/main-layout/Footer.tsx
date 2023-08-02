@@ -40,7 +40,7 @@ export default function Footer () {
             <span className='text-xs text-white'>© 2023 ROOM Arquitectos</span>
           </div>
           <div className='flex flex-col items-center md:items-end md:justify-start'>
-            <div className='flex justify-center w-full'>
+            <div className='flex justify-center w-full md:justify-end'>
               <a className='mr-4 cursor-pointer'>
                 <FacebookFilled style={{ fontSize: 20, color: 'white' }} />
               </a>
