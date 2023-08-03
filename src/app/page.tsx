@@ -16,7 +16,7 @@ export default function Home () {
       </div>
       <section
         className='lg:h-[400px] xl:h-[550px] bg-fixed bg-center bg-cover hidden md:block'
-        style={{ backgroundImage: 'url(/img/home/slider/full-width.jpg)' }}
+        style={{ backgroundImage: 'url(/img/home/full-width.jpg)' }}
       />
     </main>
   )

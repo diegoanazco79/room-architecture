@@ -7,8 +7,8 @@ import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen'
 
 import Photo from './Photo'
 
-import image1 from '../../../../../public/img/home/slider/slider-1.jpg'
-import image2 from '../../../../../public/img/home/slider/slider-2.jpg'
+import image1 from '../../../../../public/img/home/slider/desktop/slider-1.jpg'
+import image2 from '../../../../../public/img/home/slider/desktop/slider-2.jpg'
 
 import 'yet-another-react-lightbox/styles.css'
 import 'yet-another-react-lightbox/plugins/thumbnails.css'
