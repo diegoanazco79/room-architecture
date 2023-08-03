@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { FacebookFilled, InstagramFilled, LinkedinFilled, WhatsAppOutlined } from '@ant-design/icons'
+import { FacebookFilled, InstagramFilled, WhatsAppOutlined } from '@ant-design/icons'
 
 export default function Footer () {
   return (
@@ -46,9 +46,6 @@ export default function Footer () {
               </a>
               <a className='mr-4 cursor-pointer'>
                 <InstagramFilled style={{ fontSize: 20, color: 'white' }} />
-              </a>
-              <a className='mr-4 cursor-pointer'>
-                <LinkedinFilled style={{ fontSize: 20, color: 'white' }} />
               </a>
               <a className='cursor-pointer'>
                 <WhatsAppOutlined style={{ fontSize: 20, color: 'white' }} />
