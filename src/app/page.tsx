@@ -8,8 +8,8 @@ import MainProjects from './components/MainProjects'
 export default function Home () {
   return (
     <main className='py-24 bg-white md:py-32'>
-      <div className='flex flex-col items-center justify-between min-h-screen overflow-x-hidden text-black bg-white md:px-24'>
-        <div className='flex flex-col items-center w-full max-w-screen-xl px-6 mx-auto lg:px-12 xl:px-16'>
+      <div className='flex flex-col items-center justify-between min-h-screen overflow-x-hidden text-black bg-white responsive-px-4'>
+        <div className='flex flex-col items-center w-full max-w-screen-xl mx-auto'>
           <BannerSlider />
           <MainProjects />
         </div>

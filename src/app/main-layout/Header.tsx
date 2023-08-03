@@ -35,7 +35,7 @@ export default function Header () {
 
   return (
     <nav className={`fixed top-0 left-0 z-20 w-full bg-white ${scrolling ? 'shadow-sm' : ''}`}>
-      <div className='flex flex-wrap items-center justify-between max-w-screen-xl px-4 py-6 mx-auto'>
+      <div className='flex flex-wrap items-center justify-between max-w-screen-xl py-6 mx-auto responsive-px-4'>
         <a href='/' className='flex items-center'>
           <Image
             src='/img/logo.png'

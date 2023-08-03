@@ -52,14 +52,14 @@ const BannerSlider = () => {
   )
 
   return (
-    <div ref={sliderRef} className='keen-slider'>
-      <div className='keen-slider__slide h-[220px] lg:h-[450px] xl:h-[600px]'>
+    <div ref={sliderRef} className='keen-slider aspect-[2/1]'>
+      <div className='keen-slider__slide'>
         <Image src='/img/home/slider/slider-1.jpg' alt='slider-1' fill />
       </div>
-      <div className='keen-slider__slide h-[220px] lg:h-[450px] xl:h-[600px]'>
+      <div className='keen-slider__slide'>
         <Image src='/img/home/slider/slider-2.jpg' alt='slider-2' fill />
       </div>
-      <div className='keen-slider__slide h-[220px] lg:h-[450px] xl:h-[600px]'>
+      <div className='keen-slider__slide'>
         <Image src='/img/home/slider/slider-3.jpg' alt='slider-3' fill />
       </div>
       {loaded && instanceRef.current && (
