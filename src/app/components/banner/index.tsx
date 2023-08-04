@@ -2,8 +2,8 @@
 
 import React from 'react'
 
-import MobileSlider from './MobileSlider'
-import DesktopSlider from './DesktopSlider'
+import MobileSlider from './components/MobileSlider'
+import DesktopSlider from './components/DesktopSlider'
 
 import { useMediaQuery } from '@mui/material'
 
@@ -14,9 +14,7 @@ const BannerSlider = () => {
 
   return (
     <>
-      {isMobile
-        ? <MobileSlider />
-        : <DesktopSlider />}
+      {isMobile ? <MobileSlider /> : <DesktopSlider />}
     </>
   )
 }

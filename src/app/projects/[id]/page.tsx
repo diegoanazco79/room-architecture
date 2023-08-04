@@ -66,7 +66,7 @@ export default function ProjectInfoPage ({ params }: { params: { id: string } })
           </div>
           <div className='flex items-center justify-center md:hidden'>
             <button
-              className='p-2 mt-2 text-sm text-white bg-black border hover:bg-gray-950 hover:transition-all hover:duration-300'
+              className='p-2 mt-2 text-base text-white bg-black border hover:underline hover:transition-all hover:duration-300'
               onClick={() => setShowGallery(true)}
             >
               Ver galería

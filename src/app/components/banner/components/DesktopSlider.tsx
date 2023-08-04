@@ -9,7 +9,7 @@ import { useKeenSlider } from 'keen-slider/react'
 
 import 'keen-slider/keen-slider.min.css'
 
-const MobileSlider = () => {
+const DesktopSlider = () => {
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
@@ -50,30 +50,24 @@ const MobileSlider = () => {
       }
     ]
   )
+  const onChangeImage = (e: any) => e.stopPropagation() || instanceRef.current?.prev()
 
   return (
-    <div ref={sliderRef} className='keen-slider aspect-square'>
+    <div ref={sliderRef} className='keen-slider aspect-[2/1]'>
       <div className='keen-slider__slide'>
-        <Image src='/img/home/slider/mobile/slider-1.jpg' alt='slider-1' fill />
+        <Image src='/img/home/slider/desktop/slider-1.jpg' alt='slider-1' fill />
       </div>
       <div className='keen-slider__slide'>
-        <Image src='/img/home/slider/mobile/slider-2.jpg' alt='slider-2' fill />
+        <Image src='/img/home/slider/desktop/slider-2.jpg' alt='slider-2' fill />
       </div>
       {loaded && instanceRef.current && (
         <>
-          <ArrowSlider
-            left
-            onClick={(e: any) =>
-              e.stopPropagation() || instanceRef.current?.prev()}
-          />
-          <ArrowSlider
-            onClick={(e: any) =>
-              e.stopPropagation() || instanceRef.current?.next()}
-          />
+          <ArrowSlider left onClick={onChangeImage} />
+          <ArrowSlider onClick={onChangeImage} />
         </>
       )}
     </div>
   )
 }
 
-export default MobileSlider
+export default DesktopSlider
