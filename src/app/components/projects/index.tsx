@@ -14,13 +14,13 @@ const MainProjects = () => {
       <Project reverse />
       <Project reverse={false} />
 
-      <Link href='/projects'>
-        <div className='flex items-center justify-center'>
-          <button className='p-3 mt-10 text-base text-white bg-black border hover:underline hover:transition-all hover:duration-300'>
+      <div className='flex items-center justify-center'>
+        <Link href='/projects' className='w-fit'>
+          <button className='p-3 mt-10 text-base text-white bg-black border w-fit hover:underline hover:transition-all hover:duration-300'>
             Ver todos los proyectos
           </button>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   )
 }

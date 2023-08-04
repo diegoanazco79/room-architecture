@@ -1,11 +1,12 @@
 'use client'
 
 import { Wrapper, Status } from '@googlemaps/react-wrapper'
+import { LinearProgress } from '@mui/material'
 import { ReactElement, useEffect, useRef } from 'react'
 
 const render = (status: Status): ReactElement => {
   if (status === Status.FAILURE) return <span>Error</span>
-  return <span>Loading</span>
+  return <LinearProgress />
 }
 
 function MyMapComponent ({
@@ -43,9 +44,13 @@ const GoogleMaps = () => {
   const zoom = 15
 
   return (
-    <Wrapper apiKey={apiKey} render={render}>
-      <MyMapComponent center={center} zoom={zoom} />
-    </Wrapper>
+    <div>
+      <h1 className='mb-2 text-4xl font-semibold text-left xs:text-3xl'>Úbicanos</h1>
+      <p className='mb-4'>Dirección: Calle Los Cóndores 123 - Urb. Valle Hermoso - Cerro Colorado</p>
+      <Wrapper apiKey={apiKey} render={render}>
+        <MyMapComponent center={center} zoom={zoom} />
+      </Wrapper>
+    </div>
   )
 }
 
