@@ -3,6 +3,7 @@
 import React from 'react'
 
 import BannerSlider from './components/banner'
+import Contact from './components/contact'
 import MainProjects from './components/projects'
 import Profile from './components/profile'
 import Skills from './components/skills'
@@ -24,6 +25,7 @@ export default function Home () {
       <div className='text-black bg-white mt-14 md:pt-5 responsive-px-4'>
         <div className='max-w-screen-xl mx-auto'>
           <Skills />
+          <Contact />
         </div>
       </div>
     </main>

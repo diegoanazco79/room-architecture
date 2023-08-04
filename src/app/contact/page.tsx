@@ -1,5 +1,6 @@
 'use client'
 
+import ContactForm from './components/ContactForm'
 import GoogleMaps from './components/GoogleMaps'
 
 export default function ContactPage () {
@@ -7,6 +8,7 @@ export default function ContactPage () {
     <main className='min-h-screen py-32 text-black bg-white lg:px-24'>
       <div className='max-w-screen-xl mx-auto lg:px-16'>
         <GoogleMaps />
+        <ContactForm />
       </div>
     </main>
   )
