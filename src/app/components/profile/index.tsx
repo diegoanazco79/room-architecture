@@ -1,0 +1,41 @@
+import React from 'react'
+import Image from 'next/image'
+
+const Profile = () => {
+  return (
+    <div className='w-full pt-14'>
+      <h6 className='mb-2 text-base font-light'>SOBRE NOSOTROS</h6>
+      <h1 className='mb-4 text-4xl font-semibold text-left lg:mb-8'>ROOM Arquitectura</h1>
+      <div className='grid items-center grid-cols-1 gap-6 py-6 sm:grid-cols-3 md:grid-cols-3'>
+        <div>
+          <div className='relative aspect-square'>
+            <Image
+              className='aspect-square'
+              src='/img/home/slider/mobile/slider-1.jpg'
+              alt='feature-project-1'
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
+          <span className='block mt-3 text-xs text-center'>Juan Carlos Monroy - Arquitecto</span>
+        </div>
+        <div className='col-span-2 ml-14'>
+          <h4 className='mb-4 text-2xl font-semibold text-left lg:mb-8'>ROOM Arquitectura</h4>
+          <p className='mt-2 text-sm'>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type
+            specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged.
+          </p>
+          <p className='mt-2 text-sm'>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text.
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Profile

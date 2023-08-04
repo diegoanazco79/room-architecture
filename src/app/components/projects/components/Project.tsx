@@ -60,7 +60,7 @@ const Project = ({ reverse }: Props) => {
                 </Link>
               </div>
             )}
-            <div className='flex flex-col'>
+            <div className={`flex flex-col ${reverse && 'text-right'}`}>
               <span className='my-6 text-sm md:hidden xl:block lg:block'>2010</span>
               <h1 className='text-2xl font-semibold'>Casa de León</h1>
               <p className='mt-2 text-sm'>
@@ -70,9 +70,11 @@ const Project = ({ reverse }: Props) => {
                 specimen book. It has survived not only five centuries, but also the leap into
                 electronic typesetting, remaining essentially unchanged.
               </p>
-              <Link className='mt-6 text-sm text-black underline hover:font-semibold w-fit' href='/projects/'>
-                Ver proyecto
-              </Link>
+              <div className='w-full mt-6 '>
+                <Link className={`text-sm text-black underline hover:font-semibold w-fit ${reverse && 'text-right'}`} href='/projects/'>
+                  Ver proyecto
+                </Link>
+              </div>
             </div>
             {reverse && (
               <div className='md:col-span-2 relative xs:aspect-square aspect-[2/1]'>

@@ -7,7 +7,7 @@ import Project from './components/Project'
 
 const MainProjects = () => {
   return (
-    <div className='w-full pb-10 pt-14'>
+    <div className='w-full md:pb-10 pt-14'>
       <h6 className='mb-2 text-base font-light'>VIVIENDAS, INTERIORES, CALIDAD</h6>
       <h1 className='mb-4 text-4xl font-semibold text-left lg:mb-8'>Proyectos Destacados</h1>
       <Project reverse={false} />
