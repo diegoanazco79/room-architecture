@@ -6,7 +6,7 @@ const Profile = () => {
     <div className='w-full pt-14'>
       <h6 className='mb-2 text-base font-light'>SOBRE NOSOTROS</h6>
       <h1 className='mb-4 text-4xl font-semibold text-left lg:mb-8'>ROOM Arquitectura</h1>
-      <div className='grid items-center grid-cols-1 gap-6 py-6 sm:grid-cols-3 md:grid-cols-3'>
+      <div className='grid items-center grid-cols-1 py-6 gap-y-6 md:gap-6 sm:grid-cols-3 md:grid-cols-3'>
         <div>
           <div className='relative aspect-square'>
             <Image
@@ -19,7 +19,7 @@ const Profile = () => {
           </div>
           <span className='block mt-3 text-xs text-center'>Juan Carlos Monroy - Arquitecto</span>
         </div>
-        <div className='col-span-2 ml-14'>
+        <div className='col-span-2 sm:ml-10 md:ml-12'>
           <h4 className='mb-4 text-2xl font-semibold text-left lg:mb-8'>ROOM Arquitectura</h4>
           <p className='mt-2 text-sm'>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
