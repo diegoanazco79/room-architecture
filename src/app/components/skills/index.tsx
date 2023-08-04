@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <>
       <h6 className='mb-2 text-base font-light'>LOS DETALLES CUENTAN</h6>
-      <h1 className='mb-12 text-4xl font-semibold text-left'>¿Por qué elegirnos?</h1>
+      <h1 className='mb-12 text-4xl font-semibold text-left xs:text-3xl'>¿Por qué elegirnos?</h1>
       <div className='grid gap-6 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3'>
         <div className='flex flex-col items-center'>
           <div className='p-5 bg-black border rounded-full w-fit'>

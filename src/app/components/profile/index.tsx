@@ -7,7 +7,7 @@ const Profile = () => {
   return (
     <div className='w-full pt-14'>
       <h6 className='mb-2 text-base font-light'>SOBRE NOSOTROS</h6>
-      <h1 className='mb-4 text-4xl font-semibold text-left lg:mb-8'>ROOM Arquitectura</h1>
+      <h1 className='mb-4 text-4xl font-semibold text-left xs:text-3xl lg:mb-8'>ROOM Arquitectura</h1>
       <div className='grid items-center grid-cols-1 py-6 gap-y-6 md:gap-6 sm:grid-cols-3 md:grid-cols-3'>
         <div>
           <div className='relative aspect-square'>
