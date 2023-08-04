@@ -21,7 +21,7 @@ const Project = ({ reverse }: Props) => {
             <div className='relative aspect-square'>
               <Link href='/projects/'>
                 <Image
-                  className='cursor-pointer hover:opacity-50 aspect-square'
+                  className='aspect-square'
                   src='/img/home/slider/mobile/slider-1.jpg'
                   alt='feature-project-1'
                   fill
@@ -51,7 +51,7 @@ const Project = ({ reverse }: Props) => {
               <div className='col-span-2 relative aspect-[2/1]'>
                 <Link href='/projects/'>
                   <Image
-                    className='cursor-pointer hover:opacity-50 aspect-[2/1]'
+                    className='aspect-[2/1]'
                     src='/img/home/slider/desktop/slider-1.jpg'
                     alt='feature-project-1'
                     fill
@@ -80,7 +80,7 @@ const Project = ({ reverse }: Props) => {
               <div className='md:col-span-2 relative xs:aspect-square aspect-[2/1]'>
                 <Link href='/projects/'>
                   <Image
-                    className='cursor-pointer hover:opacity-50 xs:aspect-square aspect-[2/1]'
+                    className='xs:aspect-square aspect-[2/1]'
                     src='/img/home/slider/desktop/slider-1.jpg'
                     alt='feature-project-1'
                     fill

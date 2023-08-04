@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
+import Services from './components/Services'
+
 const Profile = () => {
   return (
     <div className='w-full pt-14'>
@@ -19,7 +21,7 @@ const Profile = () => {
           </div>
           <span className='block mt-3 text-xs text-center'>Juan Carlos Monroy - Arquitecto</span>
         </div>
-        <div className='col-span-2 sm:ml-10 md:ml-12'>
+        <div className='col-span-2 md:ml-12'>
           <h4 className='mb-4 text-2xl font-semibold text-left lg:mb-8'>ROOM Arquitectura</h4>
           <p className='mt-2 text-sm'>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -32,8 +34,10 @@ const Profile = () => {
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text.
           </p>
+          <Services isDesktop />
         </div>
       </div>
+      <Services isDesktop={false} />
     </div>
   )
 }
