@@ -4,15 +4,25 @@ import React from 'react'
 import Link from 'next/link'
 
 import Project from './components/Project'
+import { mainProjects } from './helpers/constants'
 
 const MainProjects = () => {
   return (
     <div className='w-full md:pb-10 pt-14'>
       <h6 className='mb-2 text-base font-light'>VIVIENDAS, INTERIORES, CALIDAD</h6>
       <h1 className='mb-4 text-4xl font-semibold text-left xs:text-3xl lg:mb-8'>Proyectos Destacados</h1>
-      <Project reverse={false} />
-      <Project reverse />
-      <Project reverse={false} />
+      {mainProjects.map((project, idx) => (
+        <Project
+          key={idx}
+          name={project.name}
+          description={project.description}
+          year={project.year}
+          desktopImage={project.desktopImage}
+          mobileImage={project.mobileImage}
+          url={project.url}
+          reverse={idx % 2 !== 0}
+        />
+      ))}
 
       <div className='flex items-center justify-center'>
         <Link href='/projects' className='w-fit'>

@@ -7,9 +7,6 @@ import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen'
 
 import Photo from './Photo'
 
-import image1 from '../../../../../public/img/home/slider/desktop/slider-1.jpg'
-import image2 from '../../../../../public/img/home/slider/desktop/slider-2.jpg'
-
 import 'yet-another-react-lightbox/styles.css'
 import 'yet-another-react-lightbox/plugins/thumbnails.css'
 
@@ -23,7 +20,7 @@ const PhotosGallery = ({ showGallery, setShowGallery }: Props) => {
     <Lightbox
       open={showGallery}
       close={() => setShowGallery(false)}
-      slides={[image1, image2]}
+      slides={[{ src: 'https://i.imgur.com/RxR2yqE.jpg' }]}
       render={{ slide: Photo }}
       plugins={[Fullscreen, Thumbnails]}
     />

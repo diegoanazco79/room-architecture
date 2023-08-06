@@ -7,6 +7,7 @@ import ArrowSlider from './ArrowSlider'
 
 import { useKeenSlider } from 'keen-slider/react'
 
+import { desktopImgUrls } from '../helpers/constants'
 import 'keen-slider/keen-slider.min.css'
 
 const DesktopSlider = () => {
@@ -54,12 +55,11 @@ const DesktopSlider = () => {
 
   return (
     <div ref={sliderRef} className='keen-slider aspect-[2/1]'>
-      <div className='keen-slider__slide'>
-        <Image src='/img/home/slider/desktop/slider-1.jpg' alt='slider-1' fill />
-      </div>
-      <div className='keen-slider__slide'>
-        <Image src='/img/home/slider/desktop/slider-2.jpg' alt='slider-2' fill />
-      </div>
+      {desktopImgUrls.map((url, index) => (
+        <div key={index} className='keen-slider__slide'>
+          <Image src={url} alt={`desktop-slider-${index}`} fill />
+        </div>
+      ))}
       {loaded && instanceRef.current && (
         <>
           <ArrowSlider left onClick={onChangeImage} />

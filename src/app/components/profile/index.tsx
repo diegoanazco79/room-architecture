@@ -13,7 +13,7 @@ const Profile = () => {
           <div className='relative aspect-square'>
             <Image
               className='aspect-square'
-              src='/img/home/slider/mobile/slider-1.jpg'
+              src='https://i.imgur.com/d86vzXW.png'
               alt='feature-project-1'
               fill
               style={{ objectFit: 'cover' }}
