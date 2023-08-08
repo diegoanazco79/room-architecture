@@ -24,7 +24,7 @@ export default function ProjectInfoPage ({ params }: { params: { id: string } })
             : <DesktopSlider desktopImages={projectData.desktopImages} />
         }
         <div className='mt-12'>
-          <div className='grid grid-cols-1 gap-8 px-6 md:grid-cols-5'>
+          <div className='grid grid-cols-1 gap-8 md:grid-cols-5'>
             <div className='col-span-4'>
               <div className='grid grid-cols-1 md:grid-cols-2'>
                 <h1 className='xl:text-[65px] lg:text-[50px] text-[40px]'>{projectData.name}</h1>
@@ -35,7 +35,7 @@ export default function ProjectInfoPage ({ params }: { params: { id: string } })
                   )}
                   <div className='hidden mt-6 md:flex'>
                     <button
-                      className='p-2 ml-auto text-sm text-white bg-black border hover:bg-gray-950 hover:transition-all hover:duration-300'
+                      className='p-2 ml-auto text-base text-white bg-black border hover:underline hover:transition-all hover:duration-300'
                       onClick={() => setShowGallery(true)}
                     >
                       Ver galería
@@ -63,7 +63,7 @@ export default function ProjectInfoPage ({ params }: { params: { id: string } })
           </div>
           <div className='flex items-center justify-center md:hidden'>
             <button
-              className='p-2 mt-2 text-base text-white bg-black border hover:underline hover:transition-all hover:duration-300'
+              className='p-3 mt-2 text-base text-white bg-black border hover:underline hover:transition-all hover:duration-300'
               onClick={() => setShowGallery(true)}
             >
               Ver galería

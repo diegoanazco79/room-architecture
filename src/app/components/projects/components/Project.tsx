@@ -27,7 +27,7 @@ const Project = ({
         ? (
           <div className='grid items-center grid-cols-1 gap-6 py-6 sm:grid-cols-2 md:grid-cols-2'>
             <div className='relative aspect-square'>
-              <Link href='/projects/'>
+              <Link href={`projects/${url}`}>
                 <Image
                   className='aspect-square'
                   src={mobileImage}

@@ -10,12 +10,12 @@ export default function ProjectInfoPage ({ params }: { params: { type_id: string
   const projectsList = getProjectsList(params.type_id)
 
   return (
-    <main className='min-h-screen py-32 text-black bg-white'>
+    <main className='min-h-screen py-24 text-black bg-white lg:py-32'>
       <div className='max-w-screen-xl mx-auto responsive-px-4'>
-        <h1 className='my-10 text-5xl font-semibold text-center'>{title}</h1>
-        <div className='grid grid-cols-3 gap-8'>
+        <h1 className='my-10 text-4xl font-semibold text-center lg:text-5xl'>{title}</h1>
+        <div className='grid grid-cols-1 gap-8 xs:gap-y-14 lg:grid-cols-3'>
           {projectsList.map((project, idx) => (
-            <div key={idx} className='p-6'>
+            <div key={idx} className='lg:p-6'>
               <Link href={project.url}>
                 <div className='relative aspect-square'>
                   <Image
