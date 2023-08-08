@@ -10,8 +10,8 @@ import './globals.css'
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'ROOM Arquitectos',
-  description: 'ROOM Arquitectos'
+  title: 'ROOM',
+  description: 'ROOM'
 }
 
 export default function RootLayout ({
@@ -20,7 +20,7 @@ export default function RootLayout ({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' translate='no'>
       <body className={montserrat.className}>
         <Header />
         {children}
