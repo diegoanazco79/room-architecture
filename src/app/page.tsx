@@ -10,7 +10,7 @@ import Skills from './components/skills'
 
 export default function Home () {
   return (
-    <main className='min-h-screen py-24 bg-white md:py-32 '>
+    <main className='min-h-screen py-24 bg-white md:py-32'>
       <div className='flex flex-col items-center justify-between overflow-x-hidden text-black bg-white responsive-px-4'>
         <div className='flex flex-col items-center w-full max-w-screen-xl mx-auto'>
           <BannerSlider />
