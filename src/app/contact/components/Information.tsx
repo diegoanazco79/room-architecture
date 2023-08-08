@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { WhatsAppOutlined, PhoneOutlined } from '@ant-design/icons'
+import { AiOutlineWhatsApp, AiOutlinePhone } from 'react-icons/ai'
 
 const Information = () => {
   return (
@@ -11,7 +11,7 @@ const Information = () => {
       <div className='grid grid-cols-2 gap-6 mt-10 h-fit'>
         <div className='flex flex-col items-center'>
           <div className='p-5 bg-black border rounded-full w-fit'>
-            <PhoneOutlined style={{ fontSize: 35, color: 'white' }} />
+            <AiOutlinePhone style={{ fontSize: 35, color: 'white' }} />
           </div>
           <div className='flex flex-col items-center w-full mt-4'>
             <h1 className='text-lg font-semibold text-center'>Teléfono</h1>
@@ -20,7 +20,7 @@ const Information = () => {
         </div>
         <div className='flex flex-col items-center'>
           <div className='p-5 bg-black border rounded-full w-fit'>
-            <WhatsAppOutlined style={{ fontSize: 35, color: 'white' }} />
+            <AiOutlineWhatsApp style={{ fontSize: 35, color: 'white' }} />
           </div>
           <div className='flex flex-col items-center w-full mt-4'>
             <h1 className='text-lg font-semibold text-center'>Whatsapp</h1>
