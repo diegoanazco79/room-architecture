@@ -37,7 +37,7 @@ export default function Footer () {
         <hr className='my-6 border-[#414141]' />
         <div className='grid w-full grid-cols-1 gap-4 md:grid-cols-2'>
           <div className='flex flex-col items-center md:items-start md:justify-start'>
-            <span className='text-xs text-white'>© 2023 ROOM Arquitectos</span>
+            <span className='text-xs text-white'>© 2023 ROOM Arquitectura y Construcción</span>
           </div>
           <div className='flex flex-col items-center md:items-end md:justify-start'>
             <div className='flex justify-center w-full md:justify-end'>

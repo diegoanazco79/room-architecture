@@ -7,7 +7,7 @@ const Profile = () => {
   return (
     <div className='w-full pt-14'>
       <h6 className='mb-2 text-base font-light'>SOBRE NOSOTROS</h6>
-      <h1 className='mb-4 text-4xl font-semibold text-left xs:text-3xl lg:mb-8'>ROOM Arquitectura</h1>
+      <h1 className='mb-4 text-4xl font-semibold text-left xs:text-3xl lg:mb-8'>ROOM Arquitectura y Construcción</h1>
       <div className='grid items-center grid-cols-1 py-6 gap-y-6 md:gap-6 sm:grid-cols-3 md:grid-cols-3'>
         <div>
           <div className='relative aspect-square'>
@@ -22,7 +22,7 @@ const Profile = () => {
           <span className='block mt-3 text-xs text-center'>Juan Carlos Monroy - Arquitecto</span>
         </div>
         <div className='col-span-2 md:ml-12'>
-          <h4 className='mb-4 text-2xl font-semibold text-left lg:mb-8'>ROOM Arquitectura</h4>
+          <h4 className='mb-4 text-2xl font-semibold text-left lg:mb-8'>¿Quiénes somos?</h4>
           <p className='mt-2 text-sm'>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
