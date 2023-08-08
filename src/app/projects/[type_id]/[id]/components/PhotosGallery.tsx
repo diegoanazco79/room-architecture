@@ -12,15 +12,18 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css'
 
 interface Props {
   showGallery: boolean
+  images: string[]
   setShowGallery: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const PhotosGallery = ({ showGallery, setShowGallery }: Props) => {
+const PhotosGallery = ({ showGallery, images, setShowGallery }: Props) => {
+  const allSlides = images.map((src) => ({ src }))
+
   return (
     <Lightbox
       open={showGallery}
       close={() => setShowGallery(false)}
-      slides={[{ src: 'https://i.imgur.com/RxR2yqE.jpg' }]}
+      slides={allSlides}
       render={{ slide: Photo }}
       plugins={[Fullscreen, Thumbnails]}
     />

@@ -1,5 +1,7 @@
 import { casaArias, casaLeon, casaMontesOca } from '@/app/helpers/projects-ids'
 
+import { homeDesignUrl, interiorDesignUrl, executedProjectsUrl } from '@/app/projects/helpers/constants'
+
 export const mainProjects = [
   {
     name: 'Casa León',
@@ -7,7 +9,7 @@ export const mainProjects = [
     year: '2020',
     desktopImage: 'https://i.imgur.com/pYWnXar.jpg',
     mobileImage: 'https://i.imgur.com/hfk1SgP.jpg',
-    url: casaLeon
+    url: `${executedProjectsUrl}/${casaLeon}`
   },
   {
     name: 'Casa Montes de Oca',
@@ -15,7 +17,7 @@ export const mainProjects = [
     year: '2019',
     desktopImage: 'https://i.imgur.com/mDa8RUN.jpg',
     mobileImage: 'https://i.imgur.com/CKsLQfF.jpg',
-    url: casaMontesOca
+    url: `${homeDesignUrl}/${casaMontesOca}`
   },
   {
     name: 'Casa Arias',
@@ -23,6 +25,6 @@ export const mainProjects = [
     year: '2023',
     desktopImage: 'https://i.imgur.com/RxR2yqE.jpg',
     mobileImage: 'https://i.imgur.com/a6fl4WK.jpg',
-    url: casaArias
+    url: `${interiorDesignUrl}/${casaArias}`
   }
 ]
