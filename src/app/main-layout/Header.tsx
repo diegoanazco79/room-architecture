@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation'
 
 import { menuItems } from '../helpers/menu-items'
 
-import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
 export default function Header () {
   const pathname = usePathname()
@@ -65,7 +65,7 @@ export default function Header () {
           className='p-2 text-black rounded-lg md:hidden'
           onClick={() => setShowNavbar(!showNavbar)}
         >
-          <MenuOutlined style={{ fontSize: 20 }} />
+          <AiOutlineMenu style={{ fontSize: 20 }} />
         </button>
       </div>
       <Drawer
@@ -79,7 +79,7 @@ export default function Header () {
             className='p-2 rounded-lg text-gray-950 md:hidden hover:bg-gray-100'
             onClick={() => setShowNavbar(!showNavbar)}
           >
-            <CloseOutlined style={{ fontSize: 25 }} />
+            <AiOutlineClose style={{ fontSize: 25 }} />
           </button>
         </div>
         <ul>

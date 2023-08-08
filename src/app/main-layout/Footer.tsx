@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { FacebookFilled, InstagramFilled, WhatsAppOutlined } from '@ant-design/icons'
+import { AiFillFacebook, AiFillInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
 
 export default function Footer () {
   return (
@@ -41,14 +41,14 @@ export default function Footer () {
           </div>
           <div className='flex flex-col items-center md:items-end md:justify-start'>
             <div className='flex justify-center w-full md:justify-end'>
-              <a className='mr-4 cursor-pointer'>
-                <FacebookFilled style={{ fontSize: 20, color: 'white' }} />
+              <a className='cursor-pointer'>
+                <AiFillFacebook style={{ fontSize: 20, color: 'white' }} />
               </a>
-              <a className='mr-4 cursor-pointer'>
-                <InstagramFilled style={{ fontSize: 20, color: 'white' }} />
+              <a className='mx-3 cursor-pointer'>
+                <AiFillInstagram style={{ fontSize: 20, color: 'white' }} />
               </a>
               <a className='cursor-pointer'>
-                <WhatsAppOutlined style={{ fontSize: 20, color: 'white' }} />
+                <AiOutlineWhatsApp style={{ fontSize: 20, color: 'white' }} />
               </a>
             </div>
           </div>

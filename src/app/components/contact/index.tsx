@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import { WhatsAppOutlined } from '@ant-design/icons'
+import { AiOutlineWhatsApp } from 'react-icons/ai'
 
 const Contact = () => {
   return (
@@ -15,9 +15,9 @@ const Contact = () => {
           </h1>
         </div>
         <div className='flex justify-center'>
-          <button className='p-3 text-base text-white bg-black border hover:bg-[#25D366] hover:transition-all hover:duration-300'>
+          <button className='flex items-center p-3 text-base text-white bg-black border hover:bg-[#25D366] hover:transition-all hover:duration-300'>
             Hablemos por WhatsApp
-            <WhatsAppOutlined style={{ fontSize: 30, color: 'white', marginLeft: 10 }} />
+            <AiOutlineWhatsApp style={{ fontSize: 30, color: 'white', marginLeft: 10 }} />
           </button>
         </div>
       </div>

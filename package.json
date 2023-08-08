@@ -9,11 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ant-design/icons": "5.1.4",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
+    "@emotion/react": "11.11.1",
+    "@emotion/styled": "11.11.0",
     "@googlemaps/react-wrapper": "1.1.35",
-    "@mui/material": "^5.14.2",
+    "@mui/material": "5.14.2",
     "@types/node": "20.4.5",
     "@types/react": "18.2.16",
     "@types/react-dom": "18.2.7",
@@ -25,6 +24,7 @@
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "4.10.1",
     "standard": "17.1.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6",

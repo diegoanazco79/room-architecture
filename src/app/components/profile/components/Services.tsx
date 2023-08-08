@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { HomeOutlined } from '@ant-design/icons'
+import { AiOutlineHome } from 'react-icons/ai'
 
 interface Props {
   isDesktop: boolean;
@@ -15,7 +15,7 @@ const Services = ({ isDesktop }: Props) => {
     <div className={gridClasses}>
       <div className='flex flex-col items-center'>
         <div className='p-5 bg-black border rounded-full w-fit'>
-          <HomeOutlined style={{ fontSize: 35, color: 'white' }} />
+          <AiOutlineHome style={{ fontSize: 35, color: 'white' }} />
         </div>
         <div className='flex flex-col items-center mt-4'>
           <h1 className='text-lg font-semibold text-center'>Diseño de Proyectos</h1>
@@ -27,7 +27,7 @@ const Services = ({ isDesktop }: Props) => {
       </div>
       <div className='flex flex-col items-center'>
         <div className='p-5 bg-black border rounded-full w-fit'>
-          <HomeOutlined style={{ fontSize: 35, color: 'white' }} />
+          <AiOutlineHome style={{ fontSize: 35, color: 'white' }} />
         </div>
         <div className='flex flex-col items-center mt-4'>
           <h1 className='text-lg font-semibold text-center'>
@@ -41,7 +41,7 @@ const Services = ({ isDesktop }: Props) => {
       </div>
       <div className='flex flex-col items-center'>
         <div className='p-5 bg-black border rounded-full w-fit'>
-          <HomeOutlined style={{ fontSize: 35, color: 'white' }} />
+          <AiOutlineHome style={{ fontSize: 35, color: 'white' }} />
         </div>
         <div className='flex flex-col items-center mt-4'>
           <h1 className='text-lg font-semibold text-center'>

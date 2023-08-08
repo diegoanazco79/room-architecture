@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CalendarOutlined } from '@ant-design/icons'
+import { AiOutlineCalendar } from 'react-icons/ai'
 
 const Skills = () => {
   return (
@@ -10,7 +10,7 @@ const Skills = () => {
       <div className='grid gap-6 gap-y-10 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3'>
         <div className='flex flex-col items-center'>
           <div className='p-5 bg-black border rounded-full w-fit'>
-            <CalendarOutlined style={{ fontSize: 35, color: 'white' }} />
+            <AiOutlineCalendar style={{ fontSize: 35, color: 'white' }} />
           </div>
           <div className='flex flex-col items-center mt-4'>
             <h1 className='text-lg font-semibold text-center'>Reuniones periódicas</h1>
@@ -19,7 +19,7 @@ const Skills = () => {
         </div>
         <div className='flex flex-col items-center'>
           <div className='p-5 bg-black border rounded-full w-fit'>
-            <CalendarOutlined style={{ fontSize: 35, color: 'white' }} />
+            <AiOutlineCalendar style={{ fontSize: 35, color: 'white' }} />
           </div>
           <div className='flex flex-col items-center mt-4'>
             <h1 className='text-lg font-semibold text-center'>Reuniones periódicas</h1>
@@ -28,7 +28,7 @@ const Skills = () => {
         </div>
         <div className='flex flex-col items-center'>
           <div className='p-5 bg-black border rounded-full w-fit'>
-            <CalendarOutlined style={{ fontSize: 35, color: 'white' }} />
+            <AiOutlineCalendar style={{ fontSize: 35, color: 'white' }} />
           </div>
           <div className='flex flex-col items-center mt-4'>
             <h1 className='text-lg font-semibold text-center'>Reuniones periódicas</h1>
@@ -37,7 +37,7 @@ const Skills = () => {
         </div>
         <div className='flex flex-col items-center md:col-span-3 lg:col-span-3 xl:col-span-3'>
           <div className='p-5 bg-black border rounded-full w-fit'>
-            <CalendarOutlined style={{ fontSize: 35, color: 'white' }} />
+            <AiOutlineCalendar style={{ fontSize: 35, color: 'white' }} />
           </div>
           <div className='flex flex-col items-center mt-4'>
             <h1 className='text-lg font-semibold text-center'>Reuniones periódicas</h1>
