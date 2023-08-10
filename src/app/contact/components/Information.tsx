@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { AiOutlineWhatsApp, AiOutlinePhone } from 'react-icons/ai'
+import { AiOutlinePhone, AiOutlineWhatsApp } from 'react-icons/ai'
 
 const Information = () => {
   return (
@@ -8,24 +8,20 @@ const Information = () => {
       <h2 className='mb-4 text-4xl font-semibold'>Contacto</h2>
       <p>¿Tienes un proyecto en mente?</p>
       <p>Hagámoslo realidad, cuéntame los detalles y adquiere una cotización</p>
-      <div className='grid grid-cols-2 gap-6 mt-10 h-fit'>
-        <div className='flex flex-col items-center'>
-          <div className='p-5 bg-black border rounded-full w-fit'>
-            <AiOutlinePhone style={{ fontSize: 35, color: 'white' }} />
-          </div>
-          <div className='flex flex-col items-center w-full mt-4'>
-            <h1 className='text-lg font-semibold text-center'>Teléfono</h1>
-            <p className='w-5/6 mt-2 text-center'>999 999 999</p>
+      <div className='flex flex-col mt-5'>
+        <div className='grid gap-6 py-4 xs:justify-items-center lg:items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
+          <h4 className='text-lg font-semibold'>Llámanos</h4>
+          <div className='flex items-center'>
+            <AiOutlinePhone style={{ fontSize: 30, color: 'black' }} />
+            <p className='ml-4'>999 999 999</p>
           </div>
         </div>
-        <div className='flex flex-col items-center'>
-          <div className='p-5 bg-black border rounded-full w-fit'>
-            <AiOutlineWhatsApp style={{ fontSize: 35, color: 'white' }} />
-          </div>
-          <div className='flex flex-col items-center w-full mt-4'>
-            <h1 className='text-lg font-semibold text-center'>Whatsapp</h1>
-            <p className='w-5/6 mt-2 text-center'>999 999 999</p>
-          </div>
+        <div className='grid gap-6 py-4 mt-5 xs:mt-3 xs:justify-items-center lg:items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
+          <h4 className='text-lg font-semibold'>Háblamemos por WhatsApp</h4>
+          <button className='w-fit flex items-center p-3 text-base text-white bg-black border hover:bg-[#25D366] hover:transition-all hover:duration-300'>
+            <AiOutlineWhatsApp style={{ fontSize: 30, color: 'white', marginRight: 10 }} />
+            999 999 999
+          </button>
         </div>
       </div>
     </div>
