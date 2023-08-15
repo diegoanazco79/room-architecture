@@ -7,7 +7,7 @@ export const initialProject = {
   secondDescription: '',
   typology: '',
   country: '',
-  year: ''
+  type: ''
 }
 
 export const casaAriasProject = {
@@ -34,7 +34,7 @@ export const casaAriasProject = {
   secondDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
   typology: 'Residencial',
   country: 'Arequipa - Perú',
-  year: '2018'
+  type: '2018'
 }
 
 export const casaLeonProject = {
@@ -61,7 +61,7 @@ export const casaLeonProject = {
   secondDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
   typology: 'Residencial',
   country: 'Arequipa - Perú',
-  year: '2018'
+  type: '2018'
 }
 
 export const casaMontesOcaProject = {
@@ -88,5 +88,5 @@ export const casaMontesOcaProject = {
   secondDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
   typology: 'Residencial',
   country: 'Arequipa - Perú',
-  year: '2018'
+  type: '2018'
 }

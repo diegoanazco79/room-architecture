@@ -28,8 +28,7 @@ const DesktopMenu = () => {
             item.url === '/' ? pathname === '/' : pathname.startsWith(item.url)
           if (item.label === 'Proyectos') {
             return (
-              <Link
-                href={item.url}
+              <div
                 key={idx}
                 className={`block cursor-pointer ${
                     isActive ? 'bg-black text-white' : ''
@@ -40,6 +39,16 @@ const DesktopMenu = () => {
                 Proyectos
                 {isDropdownVisible && (
                   <div className='absolute flex flex-col mt-2 text-black transition-all bg-white border hover:duration-300'>
+                    <Link
+                      className={`py-3 pl-2 pr-6 text-sm cursor-pointer hover:bg-black hover:text-white ${
+                        pathname === '/projects'
+                          ? 'bg-black text-white'
+                          : ''
+                      }`}
+                      href='/projects'
+                    >
+                      Todos los Proyectos
+                    </Link>
                     <Link
                       className={`py-3 pl-2 pr-6 text-sm cursor-pointer hover:bg-black hover:text-white ${
                         pathname === '/projects/home-design'
@@ -72,7 +81,7 @@ const DesktopMenu = () => {
                     </Link>
                   </div>
                 )}
-              </Link>
+              </div>
             )
           } else {
             return (

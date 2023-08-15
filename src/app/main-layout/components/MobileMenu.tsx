@@ -46,24 +46,28 @@ const MobileMenu = ({ showNavbar, setShowNavbar }: Props) => {
                   <Link
                     className={`block ${pathname === '/projects' ? 'bg-black text-white' : 'text-gray-950'} py-4 text-sm pl-2`}
                     href='/projects'
+                    onClick={() => setShowNavbar(false)}
                   >
-                    Información General
+                    Todos los Proyectos
                   </Link>
                   <Link
                     className={`block ${pathname === '/projects/home-design' ? 'bg-black text-white' : 'text-gray-950'} py-4 text-sm pl-2`}
                     href='/projects/home-design'
+                    onClick={() => setShowNavbar(false)}
                   >
                     Diseño de Viviendas
                   </Link>
                   <Link
                     className={`block ${pathname === '/projects/interior-design' ? 'bg-black text-white' : 'text-gray-950'} py-4 text-sm pl-2`}
                     href='/projects/interior-design'
+                    onClick={() => setShowNavbar(false)}
                   >
                     Diseño de Interiores
                   </Link>
                   <Link
                     className={`block ${pathname === '/projects/executed-projects' ? 'bg-black text-white' : 'text-gray-950'} py-4 text-sm pl-2`}
                     href='/projects/executed-projects'
+                    onClick={() => setShowNavbar(false)}
                   >
                     Proyectos Ejecutados
                   </Link>

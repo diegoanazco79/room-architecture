@@ -55,8 +55,8 @@ export default function ProjectInfoPage ({ params }: { params: { id: string } })
                   <h4 className='text-base font-light'>{projectData.country}</h4>
                 </div>
                 <div className='mb-4'>
-                  <h4 className='text-base font-semibold'>AÑO</h4>
-                  <h4 className='text-base font-light'>{projectData.year}</h4>
+                  <h4 className='text-base font-semibold'>TIPO</h4>
+                  <h4 className='text-base font-light'>{projectData.type}</h4>
                 </div>
               </div>
             </div>
