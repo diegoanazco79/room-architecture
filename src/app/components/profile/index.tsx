@@ -23,14 +23,14 @@ const Profile = () => {
         </div>
         <div className='col-span-2 md:ml-12'>
           <h4 className='mb-4 text-2xl font-semibold text-left lg:mb-8'>¿Quiénes somos?</h4>
-          <p className='mt-2 text-sm'>
+          <p className='mt-2 text-base'>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
             when an unknown printer took a galley of type and scrambled it to make a type
             specimen book. It has survived not only five centuries, but also the leap into
             electronic typesetting, remaining essentially unchanged.
           </p>
-          <p className='mt-2 text-sm'>
+          <p className='mt-2 text-base'>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text.
           </p>

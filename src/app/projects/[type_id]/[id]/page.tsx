@@ -29,9 +29,9 @@ export default function ProjectInfoPage ({ params }: { params: { id: string } })
               <div className='grid grid-cols-1 md:grid-cols-2'>
                 <h1 className='xl:text-[65px] lg:text-[50px] text-[40px]'>{projectData.name}</h1>
                 <div className='lg:pl-8'>
-                  <p className='text-sm'>{projectData.firstDescription}</p>
+                  <p className='text-base'>{projectData.firstDescription}</p>
                   {projectData.secondDescription && (
-                    <p className='mt-4 text-sm'>{projectData.secondDescription}</p>
+                    <p className='mt-4 text-base'>{projectData.secondDescription}</p>
                   )}
                   <div className='hidden mt-6 md:flex'>
                     <button

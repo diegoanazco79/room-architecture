@@ -39,9 +39,9 @@ const Project = ({
             </div>
             <div className='flex flex-col'>
               <h1 className='text-2xl font-semibold'>{name}</h1>
-              <p className='mt-2 text-sm'>{description}</p>
+              <p className='mt-2 text-base'>{description}</p>
               <Link
-                className='mt-6 text-sm text-black underline hover:font-semibold w-fit'
+                className='mt-6 text-base text-black underline hover:font-semibold w-fit'
                 href={`projects/${url}`}
               >
                 Ver proyecto
@@ -66,12 +66,11 @@ const Project = ({
               </div>
             )}
             <div className={`flex flex-col ${reverse && 'text-right'}`}>
-              <span className='my-6 text-sm md:hidden xl:block lg:block'>{year}</span>
               <h1 className='text-2xl font-semibold'>{name}</h1>
-              <p className='mt-2 text-sm'>{description}</p>
+              <p className='mt-2 text-base'>{description}</p>
               <div className='w-full mt-6 '>
                 <Link
-                  className={`text-sm text-black underline hover:font-semibold w-fit ${reverse && 'text-right'}`}
+                  className={`text-base text-black underline hover:font-semibold w-fit ${reverse && 'text-right'}`}
                   href={`projects/${url}`}
                 >
                   Ver proyecto
