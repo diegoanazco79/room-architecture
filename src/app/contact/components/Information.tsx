@@ -13,7 +13,7 @@ const Information = () => {
           <h4 className='text-lg font-semibold'>Llámanos</h4>
           <div className='flex items-center'>
             <AiOutlinePhone style={{ fontSize: 30, color: 'black' }} />
-            <p className='ml-4'>999 999 999</p>
+            <p className='ml-4 text-base'>999 999 999</p>
           </div>
         </div>
         <div className='grid gap-6 py-4 mt-5 xs:mt-3 xs:justify-items-center lg:items-center xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>

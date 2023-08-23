@@ -18,7 +18,7 @@ const People = () => {
         <div>
           <h4 className='text-xl font-semibold'>JUAN CARLOS MONROY</h4>
           <h6 className='text-lg italic font-semibold'>Arquitecto / Director</h6>
-          <p className='mt-4'>
+          <p className='mt-4 text-base'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text ever
             since the 1500s, when an unknown printer took
@@ -36,7 +36,7 @@ const People = () => {
         <div>
           <h4 className='text-xl font-semibold'>JUAN CARLOS MONROY</h4>
           <h6 className='text-lg italic font-semibold'>Arquitecto / Director</h6>
-          <p className='mt-4'>
+          <p className='mt-4 text-base'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text ever
             since the 1500s, when an unknown printer took

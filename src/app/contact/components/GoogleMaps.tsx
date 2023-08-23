@@ -45,8 +45,8 @@ const GoogleMaps = () => {
 
   return (
     <div>
-      <h1 className='mb-2 text-4xl font-semibold text-left xs:text-3xl'>Úbicanos</h1>
-      <p className='mb-4'>Dirección: Calle Los Cóndores 123 - Urb. Valle Hermoso - Cerro Colorado</p>
+      <h1 className='mb-2 text-4xl font-semibold text-left xs:text-3xl'>Ubícanos</h1>
+      <p className='mb-4 text-base'>Dirección: Calle Los Cóndores 123 - Urb. Valle Hermoso - Cerro Colorado</p>
       <Wrapper apiKey={apiKey} render={render}>
         <MyMapComponent center={center} zoom={zoom} />
       </Wrapper>

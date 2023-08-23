@@ -23,7 +23,7 @@ export default function Footer () {
             </p>
           </div>
           <div className='flex flex-col items-center md:items-end md:justify-start'>
-            <h1 className='flex items-center font-bold text-lg md:h-[52.5px] h-[40px] my-auto text-white'>Contacto</h1>
+            <h1 className='flex items-center font-semibold text-lg md:h-[52.5px] h-[40px] my-auto text-white'>Contacto</h1>
             <div className='flex flex-col items-center mt-4 md:items-end'>
               <span className='mb-3 text-xs text-center text-white md:text-right'>+51 999 999 999</span>
               <span className='mb-3 text-xs text-center text-white md:text-right'>roomArquitectos@room.com</span>

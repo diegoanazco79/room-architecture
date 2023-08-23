@@ -7,7 +7,7 @@ import { AiOutlineWhatsApp } from 'react-icons/ai'
 const Contact = () => {
   return (
     <div className='mt-20'>
-      <div className='grid items-center gap-4 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
+      <div className='grid items-center gap-6 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
         <div>
           <h6 className='mb-2 text-base font-light'>CONTÁCTANOS</h6>
           <h1 className='mb-4 text-4xl font-semibold text-left xs:text-3xl lg:mb-8'>
