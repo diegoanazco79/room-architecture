@@ -1,6 +1,5 @@
+import Image from 'next/image'
 import React from 'react'
-
-import { AiOutlineHome } from 'react-icons/ai'
 
 interface Props {
   isDesktop: boolean;
@@ -14,42 +13,48 @@ const Services = ({ isDesktop }: Props) => {
   return (
     <div className={gridClasses}>
       <div className='flex flex-col items-center'>
-        <div className='p-5 bg-black border rounded-full w-fit'>
-          <AiOutlineHome style={{ fontSize: 35, color: 'white' }} />
-        </div>
+        <Image
+          src='/svg/blue-print.svg'
+          alt='blue-print'
+          width={60}
+          height={60}
+        />
         <div className='flex flex-col items-center mt-4'>
-          <h1 className='text-lg font-semibold text-center'>Diseño de Proyectos</h1>
+          <h1 className='text-lg font-semibold text-center'>Diseño de proyectos</h1>
           <p className='w-5/6 mt-2 text-sm text-center'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Diseñamos tu proyecto soñado; trabajamos desde la visita a tu terreno hasta la obtención de tu licencia de construcción.
           </p>
         </div>
       </div>
       <div className='flex flex-col items-center'>
-        <div className='p-5 bg-black border rounded-full w-fit'>
-          <AiOutlineHome style={{ fontSize: 35, color: 'white' }} />
-        </div>
+        <Image
+          src='/svg/interior-design.svg'
+          alt='interior-design'
+          width={60}
+          height={60}
+        />
         <div className='flex flex-col items-center mt-4'>
           <h1 className='text-lg font-semibold text-center'>
-            Diseño de Interiores
+            Diseño de interiores
           </h1>
           <p className='w-5/6 mt-2 text-sm text-center'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Combinamos estilo y color, creamos espacios únicos y personalizados acorde a tus necesidades.
           </p>
         </div>
       </div>
       <div className='flex flex-col items-center'>
-        <div className='p-5 bg-black border rounded-full w-fit'>
-          <AiOutlineHome style={{ fontSize: 35, color: 'white' }} />
-        </div>
+        <Image
+          src='/svg/construction.svg'
+          alt='construction'
+          width={60}
+          height={60}
+        />
         <div className='flex flex-col items-center mt-4'>
           <h1 className='text-lg font-semibold text-center'>
-            Construcción de Proyectos
+            Construcción de proyectos
           </h1>
           <p className='w-5/6 mt-2 text-sm text-center'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Hacemos realidad nuestros diseños, prestamos especial atención a cada detalle constructivo.
           </p>
         </div>
       </div>

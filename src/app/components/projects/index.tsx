@@ -9,14 +9,14 @@ import { mainProjects } from './helpers/constants'
 const MainProjects = () => {
   return (
     <div className='w-full md:pb-10 pt-14'>
-      <h6 className='mb-2 text-base font-light'>VIVIENDAS, INTERIORES, CALIDAD</h6>
-      <h1 className='mb-4 text-4xl font-semibold text-left xs:text-3xl lg:mb-8'>Proyectos Destacados</h1>
+      <h6 className='mb-2 text-base font-light'>DISEÑO, CONSTRUCCIÓN E INTERIORISMO</h6>
+      <h1 className='mb-4 text-4xl font-semibold text-left xs:text-3xl lg:mb-8'>Proyectos destacados</h1>
       {mainProjects.map((project, idx) => (
         <Project
           key={idx}
           name={project.name}
           description={project.description}
-          year={project.year}
+          caption={project.caption}
           desktopImage={project.desktopImage}
           mobileImage={project.mobileImage}
           url={project.url}

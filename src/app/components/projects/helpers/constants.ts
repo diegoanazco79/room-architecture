@@ -4,25 +4,25 @@ import { homeDesignUrl, interiorDesignUrl, executedProjectsUrl } from '@/app/pro
 
 export const mainProjects = [
   {
-    name: 'Casa León',
+    name: 'Diseño para Julia',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,    when an unknown printer took a galley of type and scrambled it to make a type    specimen book. It has survived not only five centuries, but also the leap into    electronic typesetting, remaining essentially unchanged.",
-    year: '2020',
+    caption: 'Diseño de interiores',
     desktopImage: 'https://i.imgur.com/pYWnXar.jpg',
     mobileImage: 'https://i.imgur.com/hfk1SgP.jpg',
     url: `${executedProjectsUrl}/${casaLeon}`
   },
   {
-    name: 'Casa Montes de Oca',
+    name: 'Casa con amplio jardín',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,    when an unknown printer took a galley of type and scrambled it to make a type    specimen book. It has survived not only five centuries, but also the leap into    electronic typesetting, remaining essentially unchanged.",
-    year: '2019',
+    caption: 'Diseño de proyecto',
     desktopImage: 'https://i.imgur.com/mDa8RUN.jpg',
     mobileImage: 'https://i.imgur.com/CKsLQfF.jpg',
     url: `${homeDesignUrl}/${casaMontesOca}`
   },
   {
-    name: 'Casa Arias',
+    name: 'Casa con jardín lateral',
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,    when an unknown printer took a galley of type and scrambled it to make a type    specimen book. It has survived not only five centuries, but also the leap into    electronic typesetting, remaining essentially unchanged.",
-    year: '2023',
+    caption: 'Proyecto construido',
     desktopImage: 'https://i.imgur.com/RxR2yqE.jpg',
     mobileImage: 'https://i.imgur.com/a6fl4WK.jpg',
     url: `${interiorDesignUrl}/${casaArias}`

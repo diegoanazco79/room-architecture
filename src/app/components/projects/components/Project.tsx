@@ -9,7 +9,7 @@ import { useMediaQuery } from '@mui/material'
 interface Props {
   name: string
   description: string
-  year: string
+  caption: string
   desktopImage: string
   mobileImage: string
   url: string
@@ -17,7 +17,7 @@ interface Props {
 }
 
 const Project = ({
-  name, description, year, desktopImage, mobileImage, url, reverse
+  name, description, caption, desktopImage, mobileImage, url, reverse
 }: Props) => {
   const isTablet = useMediaQuery('(max-width: 930px)')
 
@@ -38,6 +38,7 @@ const Project = ({
               </Link>
             </div>
             <div className='flex flex-col'>
+              <h6 className='mb-4 text-base font-light'>{caption}</h6>
               <h1 className='text-2xl font-semibold'>{name}</h1>
               <p className='mt-2 text-base'>{description}</p>
               <Link
@@ -66,6 +67,7 @@ const Project = ({
               </div>
             )}
             <div className={`flex flex-col ${reverse && 'text-right'}`}>
+              <h6 className='mb-4 text-base font-light'>{caption}</h6>
               <h1 className='text-2xl font-semibold'>{name}</h1>
               <p className='mt-2 text-base'>{description}</p>
               <div className='w-full mt-6 '>
